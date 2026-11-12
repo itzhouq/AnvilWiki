@@ -16,7 +16,7 @@ import { getUi } from '~/i18n/ui';
 import { getEntriesByCategory, parseEntryId } from '~/lib/content';
 import { toDealMerchants } from '~/lib/content-utils';
 import { itemListJsonLd, pageTitle, simpleBreadcrumbJsonLd } from '~/lib/seo';
-import { detailPath, homeUrl, listPath } from '~/lib/url';
+import { detailPath, homeUrl, listPath, localizePath } from '~/lib/url';
 
 interface Props {
   locale: Locale;
@@ -43,6 +43,18 @@ const description =
   (String(shared.defaultListDescription ?? '').replace('{title}', title) || title);
 
 const entries = await getEntriesByCategory(category, locale);
+
+// Sibling category chips with live counts — only categories that actually
+// have entries in this locale (matches the noindex-empty-category rule).
+const categoryLinks = (await Promise.all(
+  NAVIGATION_CONFIG.map(async (item) => ({
+    ...item,
+    count:
+      item.key === category
+        ? entries.length
+        : (await getEntriesByCategory(item.key, locale)).length,
+  })),
+)).filter((item) => item.count > 0);
 
 // Coupon-hub presentation variant: the codes list becomes a merchant-grouped
 // deals board instead of article cards. Build-time signal from site.ts —
@@ -90,19 +102,54 @@ const jsonLd = [
   jsonLd={jsonLd}
   noindex={entries.length === 0}
 >
-  <div class="space-y-6">
-    <header>
+  <div class="space-y-8">
+    <header class="border-b border-border pb-7">
       <nav class="text-sm text-muted-foreground" aria-label={shared.breadcrumbAria ?? 'Breadcrumb'}>
         <a href={homeUrl(locale)} class="hover:text-nav">{nav.home}</a>
-        <span class="mx-1">/</span>
-        <span class="text-foreground">{title}</span>
+        <span class="mx-2" aria-hidden="true">/</span>
+        <span class="text-foreground" aria-current="page">{nav[category] ?? title}</span>
       </nav>
-      <div class="mt-2 flex items-center gap-3">
-        {navItem && <Icon name={navItem.icon} class="h-7 w-7 text-nav" />}
-        <h1 class="text-3xl font-extrabold tracking-tight">{title}</h1>
+      <div class="mt-6 flex flex-wrap items-end justify-between gap-4">
+        <div class="min-w-0 max-w-3xl">
+          <div class="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-nav">
+            {navItem && <Icon name={navItem.icon} class="h-4 w-4" />}
+            <span>{nav[category] ?? title}</span>
+          </div>
+          <h1 class="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">{title}</h1>
+          <p class="mt-4 max-w-2xl leading-relaxed text-muted-foreground">{description}</p>
+        </div>
+        <p class="flex shrink-0 items-baseline gap-2 border-l border-nav/50 pl-4 text-sm text-muted-foreground">
+          <span class="font-display text-3xl text-foreground">{entries.length}</span>
+          {shared.articlesCount}
+        </p>
       </div>
-      <p class="mt-2 max-w-2xl text-muted-foreground">{description}</p>
     </header>
+
+    {
+      entries.length > 0 && (
+        <nav class="flex flex-wrap items-center gap-2" aria-label={shared.browseAll}>
+          {categoryLinks.map((item) => (
+            <a
+              href={localizePath(item.path, locale)}
+              aria-current={item.key === category ? 'page' : undefined}
+              class:list={[
+                'inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm transition-colors',
+                item.key === category
+                  ? 'border-nav/50 bg-nav/10 font-semibold text-nav'
+                  : 'border-border bg-card text-muted-foreground hover:border-nav/50 hover:text-foreground',
+              ]}
+            >
+              {nav[item.key] ?? item.key}
+              <span class="text-xs tabular-nums text-muted-foreground">{item.count}</span>
+            </a>
+          ))}
+          <a href={localizePath('/recent/', locale)} class="inline-flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-nav">
+            <Icon name="lucide:clock" class="h-4 w-4" />
+            {shared.recentTitle}
+          </a>
+        </nav>
+      )
+    }
 
     {
       entries.length === 0 ? (
@@ -117,21 +164,34 @@ const jsonLd = [
           copiedText={shared.copied}
         />
       ) : (
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {entries.map((entry) => {
             const slug = parseEntryId(entry.id)?.slug ?? '';
+            const updated = entry.data.lastModified ?? entry.data.date;
             return (
-              <a href={detailPath(category, slug, locale)} class="card p-5">
-                {entry.data.image && <ArticleCover src={entry.data.image} />}
-                <h2 class="font-semibold leading-snug">{entry.data.title}</h2>
-                <p class="mt-1 line-clamp-2 text-sm text-muted-foreground">
-                  {entry.data.description}
-                </p>
-                <p class="mt-3 text-xs text-muted-foreground">
-                  {entry.data.lastModified
-                    ? `${shared.lastUpdated}: ${entry.data.lastModified.toLocaleDateString(locale, { timeZone: 'UTC' })}`
-                    : `${shared.publishedOn}: ${entry.data.date.toLocaleDateString(locale, { timeZone: 'UTC' })}`}
-                </p>
+              <a href={detailPath(category, slug, locale)} class="card group flex min-w-0 flex-col overflow-hidden">
+                {entry.data.image && (
+                  <ArticleCover src={entry.data.image} class="aspect-video w-full border-b border-border object-cover" />
+                )}
+                <div class="flex flex-1 flex-col p-5 sm:p-6">
+                  <p class="mb-3 text-xs font-medium uppercase tracking-wider text-nav">
+                    {nav[category] ?? category}
+                  </p>
+                  <h2 class="text-xl font-semibold leading-snug transition-colors group-hover:text-nav">{entry.data.title}</h2>
+                  <p class="mt-3 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                    {entry.data.description}
+                  </p>
+                  <div class="mt-auto flex items-end justify-between gap-3 pt-6">
+                    <p class="text-xs leading-relaxed text-muted-foreground">
+                      <span class="block">{entry.data.lastModified ? shared.lastUpdated : shared.publishedOn}</span>
+                      <time datetime={updated.toISOString()}>{updated.toLocaleDateString(locale, { timeZone: 'UTC' })}</time>
+                    </p>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-nav">
+                      {shared.open}
+                      <Icon name="lucide:arrow-right" class="h-3.5 w-3.5" />
+                    </span>
+                  </div>
+                </div>
               </a>
             );
           })}

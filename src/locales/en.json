@@ -190,8 +190,13 @@
       "title": "Fortnite Pirate Token: What It Is and How to Get It This Week",
       "description": "The Pirate Token is an ultra-rare chest drop — 1 in 137,500 — that makes every V-Bucks item in the shop free for 14 days. This week's gold outfit is Solid Gold Lil Uzi Vert; Saturday's Treasure Hours boost the odds.",
       "videoId": "rnjWNafJy8Q",
-      "ctaPrimary": "Play Fortnite",
-      "ctaSecondary": "Track Gold Outfits"
+      "ctaPrimary": "Start reading",
+      "ctaSecondary": "Track Gold Outfits",
+      "ctaPrimaryHref": "/guides/pirate-token-odds/",
+      "image": "/images/articles/treasure-hunters-live-action-key-art.jpg",
+      "imageAlt": "Fortnite Treasure Hunters key art with the season captains and a gold treasure chest",
+      "imageCredit": "Art: Epic Games — Fortnite Treasure Hunters",
+      "imageSource": "https://www.fortnite.com/news/fortnite-treasure-hunters-the-greatest-adventure-of-all-time"
     },
     "start": {
       "badge": "Start here",
