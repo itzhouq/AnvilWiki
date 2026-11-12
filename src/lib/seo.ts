@@ -35,6 +35,11 @@ export function websiteJsonLd(locale: Locale = defaultLocale) {
     url: siteUrl,
     description: site.description,
     inLanguage: locale,
+    // The SITE launched when this fork went live — not the game's release
+    // date. dateModified resolves to the build day, i.e. the day the latest
+    // content update was actually deployed (never a future date).
+    ...(site.launchedAt ? { datePublished: site.launchedAt } : {}),
+    dateModified: new Date().toISOString().slice(0, 10),
   };
 }
 
@@ -294,7 +299,6 @@ export function videoGameJsonLd() {
     genre: site.game.genre,
     gamePlatform: site.game.platform,
     publisher: { '@type': 'Organization', name: site.game.developer },
-    ...(site.game.releaseDate ? { datePublished: site.game.releaseDate } : {}),
   };
 }
 

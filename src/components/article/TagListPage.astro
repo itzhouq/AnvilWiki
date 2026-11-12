@@ -12,8 +12,8 @@ import { type Locale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
 import { getEntriesByTag, localesForTag, parseEntryId, tagLabelFor } from '~/lib/content';
 import { pageTitle, simpleBreadcrumbJsonLd, urlListJsonLd } from '~/lib/seo';
-import { detailPath, homeUrl, tagPath, tagsPath } from '~/lib/url';
-import { siteUrl } from '~/config/site';
+import { detailPath, homeUrl, tagDisplayLabel, tagPath, tagsPath } from '~/lib/url';
+import { site, siteUrl } from '~/config/site';
 
 interface Props {
   locale: Locale;
@@ -26,8 +26,10 @@ const nav = ui.nav;
 const shared = ui.shared;
 
 const label = await tagLabelFor(tagSlug, locale);
-const title = label ?? tagSlug;
-const description = `${title} — ${shared.allTags} · ${ui.site.tagline}`;
+// Display form: normal case, no leading "#" (tag slugs stay lowercase for URLs).
+const display = tagDisplayLabel(label ?? tagSlug);
+const title = display;
+const description = `${display} — articles and guides on ${site.name}.`;
 
 const entries = await getEntriesByTag(tagSlug, locale);
 // Tag pages don't fall back — only offer languages where the tag exists.
@@ -55,6 +57,8 @@ const jsonLd = [
   alternates={alternates}
   jsonLd={jsonLd}
   availableLocales={availableLocales}
+  noindex
+  robotsContent="noindex, follow"
 >
   <div class="space-y-6">
     <header>
@@ -67,7 +71,7 @@ const jsonLd = [
       </nav>
       <div class="mt-2 flex items-center gap-3">
         <Icon name="lucide:tag" class="h-7 w-7 text-nav" />
-        <h1 class="text-3xl font-extrabold tracking-tight">#{title}</h1>
+        <h1 class="text-3xl font-extrabold tracking-tight">{title}</h1>
         <span class="rounded-full bg-muted px-2.5 py-0.5 text-sm text-muted-foreground">
           {entries.length} {shared.articlesCount}
         </span>

@@ -30,8 +30,10 @@ interface Props {
   jsonLd?: Record<string, unknown>[];
   /** Set to true on article pages for og:type=article. */
   article?: boolean;
-  /** When true, emit <meta name="robots" content="noindex"> to exclude from search. */
+  /** When true, emit a noindex robots meta to exclude from search. */
   noindex?: boolean;
+  /** Full robots content override for noindex pages (e.g. "noindex, follow" for tag hubs). */
+  robotsContent?: string;
   /**
    * Real dimensions of `image` (px). Omitted for article covers whose size we
    * don't know — a WRONG og:image:width/height makes scrapers mis-crop the
@@ -80,6 +82,7 @@ const {
   jsonLd = [],
   article = false,
   noindex = false,
+  robotsContent,
   titleSuffix,
   ogImageWidth,
   ogImageHeight,
@@ -172,7 +175,7 @@ const privacyLabel = consent?.privacyLabel ?? footerStrings.privacyPolicy ?? 'Pr
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     {noindex ? (
-      <meta name="robots" content="noindex, nofollow" />
+      <meta name="robots" content={robotsContent ?? 'noindex, nofollow'} />
     ) : (
       /* Google Discover large-image previews require explicit permission —
          without this, covers never surface as large preview images (v2.0). */

@@ -138,24 +138,27 @@
   "overview": {
     "guides": {
       "overviewTitle": "Fortnite Guides",
-      "overviewDescription": "These guides answer the questions Fortnite players are actually searching for during the Treasure Hunters season. Pirate Token Odds holds the complete official drop-rate table — every chest reward from the 1-in-1,562,500 gold outfit down to the 1-in-127 Gizmos — plus the Treasure Hours multipliers Epic Games confirmed. How to Get the Pirate Token turns those odds into a grind plan: where chest density is highest on Crossbones Isle, how the Lucky Locator Gizmo helps, and when the Saturday boosted windows run. The Event Schedule page lines up every dated moment left in the season: Treasure Hours on Saturdays at 2 PM and 9 PM ET, Mastery Mondays, Captain's Days, and the December 5 chapter end event. Guides are re-verified after every official announcement, and numbers Epic has not confirmed are labeled as estimates or left out entirely. Start with the odds table if you want the raw math, the how-to guide if you are actively grinding for the token, or the schedule if you just want to plan your week around the boosted windows."
+      "overviewDescription": "The confirmed drop-rate table, the token hunt step by step, and every dated Treasure Hunters moment — one question per guide, numbers first.",
+      "overviewSeoTitle": "Fortnite Guides: Odds, Schedules and How-Tos"
     },
     "items": {
       "overviewTitle": "Fortnite Items",
-      "overviewDescription": "Every collectible worth tracking in Fortnite this season sits in this category. The Weekly Gold Outfit page follows the rarest free skin in the game — a 1-in-1,562,500 chest drop that rotates every Sunday during the Treasure Hunters event — and logs each weekly reveal with its dates. The Pirate Shop Access page explains the token that makes the entire V-Bucks shop free for 14 days, including what it covers, what it excludes, and the two validity windows Epic assigned to it. The Item Shop Today page breaks down the daily reset time, this week's captain shop arrivals such as Lil Uzi Vert and Cap'n Hatsune Miku, and where to check the live rotation. Item pages are refreshed after every Sunday reveal and every captain arrival, and each claim carries a last-verified date. Start with the gold outfits page if you are chasing the rarest drops, the pirate shop page if you want the token's full rules, or the shop page if you simply want to know what lands tonight."
+      "overviewDescription": "Track the weekly Solid Gold skin rotation, the Pirate Shop token and the daily item shop reset — every item page carries a last-verified date.",
+      "overviewSeoTitle": "Fortnite Items: Skins, Shop and Rewards"
     },
     "codes": {
-      "overviewTitle": "Fortnite Codes",
-      "overviewDescription": "This hub tracks every Fortnite redeem code and is updated the moment a new code goes live, with a verification date on every entry. The honest status right now is simple: Epic Games has no active redeem code as of November 12, 2026, and no legitimate code list exists to redeem. When Epic releases one, it will appear here and on the November 2026 code page with its reward, expiry, and source. Redemption always happens at the official fortnite.com/redeemcode page, and the code guide explains that process step by step. Because free V-Bucks code offers are one of the most common Fortnite scams, this hub also lists the red flags to check before pasting any code anywhere. In the meantime, the real free-reward channel this season is the Treasure Hunters event: chests on Crossbones Isle drop the Weekly Gold Outfit and the Pirate Shop Access token, and both are tracked on this site with their official odds."
+      "overviewTitle": "Fortnite Codes and Rewards",
+      "overviewSeoTitle": "Fortnite Codes and Rewards Hub",
+      "overviewDescription": "Fortnite reward guides: redeem codes, free items and chest reward tiers."
     }
   },
   "home": {
     "meta": {
-      "title": "Fortnite Pirate Token: What It Is and How to Get It This Week",
-      "description": "The Pirate Token — 1 in 137,500 chests — makes the whole Fortnite shop free for 14 days. Track the weekly gold outfit, official odds, and Treasure Hour times."
+      "title": "Fortnite Gold Outfits: Weekly Rotation, Odds & Dates",
+      "description": "Every Fortnite weekly gold outfit reveal with dates, the official 1-in-1,562,500 chest odds, Treasure Hour boosts and this week's Solid Gold skin."
     },
     "updates": {
-      "title": "Recent updates"
+      "title": "Latest guides"
     },
     "popular": {
       "badge": "Popular",
@@ -187,12 +190,12 @@
     },
     "hero": {
       "badge": "Fortnite Treasure Hunters",
-      "title": "Fortnite Pirate Token: What It Is and How to Get It This Week",
-      "description": "The Pirate Token is an ultra-rare chest drop — 1 in 137,500 — that makes every V-Bucks item in the shop free for 14 days. This week's gold outfit is Solid Gold Lil Uzi Vert; Saturday's Treasure Hours boost the odds.",
+      "title": "Fortnite Gold Outfits: This Week's Weekly Gold Outfit and Odds",
+      "description": "The weekly gold outfit is the rarest free skin in Fortnite — 1 in 1,562,500 chests, 1 in 208,333 during Saturday Treasure Hours. Every reveal, every date, tracked with source-verified numbers.",
       "videoId": "rnjWNafJy8Q",
       "ctaPrimary": "Start reading",
-      "ctaSecondary": "Track Gold Outfits",
-      "ctaPrimaryHref": "/guides/pirate-token-odds/",
+      "ctaSecondary": "Browse items",
+      "ctaPrimaryHref": "/items/fortnite-gold-outfits/",
       "image": "/images/articles/treasure-hunters-live-action-key-art.jpg",
       "imageAlt": "Fortnite Treasure Hunters key art with the season captains and a gold treasure chest",
       "imageCredit": "Art: Epic Games — Fortnite Treasure Hunters",
@@ -348,6 +351,56 @@
           "answer": "Every Saturday: 2–4 PM ET and 9–11 PM ET. Both windows boost the chest odds, and the season runs through the December 5 end event."
         }
       ]
+    },
+    "gold": {
+      "thisWeek": {
+        "title": "This week's gold outfit: Solid Gold Lil Uzi Vert",
+        "body": "Revealed Sunday, November 8 — the second of five weekly Solid Gold reveals in the Treasure Hunters season. It only drops from Treasure Hunters chests until the next Sunday reveal replaces it.",
+        "linkLabel": "Track the weekly rotation",
+        "href": "/items/fortnite-gold-outfits/"
+      },
+      "odds": {
+        "title": "Official gold outfit odds",
+        "baseTitle": "Base rate: 1 in 1,562,500 chests",
+        "baseBody": "Epic Games' confirmed per-chest rate — about 0.000064%, the rarest drop in the Treasure Hunters pool and roughly 11 times rarer than the Pirate Shop Access token.",
+        "treasureTitle": "Saturday Treasure Hour rate: 1 in 208,333",
+        "treasureBody": "Saturday Treasure Hours apply a 7.5x multiplier — the best window the game ever offers. Each treasure type can drop once per week; Gizmos are unlimited.",
+        "linkLabel": "See the full odds table",
+        "href": "/guides/pirate-token-odds/"
+      },
+      "how": {
+        "title": "How to get a gold outfit from Treasure Hunters chests",
+        "body": "There is one method: open Treasure Hunters chests on the Crossbones Isle map. Drop at the densest POIs — Rubber Resort and Lantern Landing hold about 47 and 45 chests — sweep every spawn, and grind inside the Saturday windows for the boosted rate.",
+        "linkLabel": "Read the full grind plan",
+        "href": "/items/fortnite-gold-outfits/"
+      },
+      "calendar": {
+        "title": "Gold outfit reveal calendar",
+        "rows": [
+          {
+            "week": "Week 1",
+            "skin": "Solid Gold Rugahand (A$AP Rocky)",
+            "date": "Revealed November 1"
+          },
+          {
+            "week": "Week 2",
+            "skin": "Solid Gold Lil Uzi Vert",
+            "date": "Revealed November 8 — current"
+          },
+          {
+            "week": "Week 3",
+            "skin": "To be revealed",
+            "date": "Expected November 15"
+          },
+          {
+            "week": "Weeks 4-5",
+            "skin": "To be revealed",
+            "date": "Expected November 22 and 29"
+          }
+        ],
+        "linkLabel": "Full release schedule",
+        "href": "/items/fortnite-gold-outfits/"
+      }
     }
   },
   "footer": {

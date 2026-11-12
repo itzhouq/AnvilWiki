@@ -26,6 +26,13 @@ const wiki = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string().max(80),
+      /**
+       * SEO <title> override for pages whose H1 intentionally differs from
+       * the search title (one keyword per page, H1 != Title rule). Falls back
+       * to `title` when absent; og:title/twitter:title follow this value via
+       * pageTitle().
+       */
+      seoTitle: z.string().max(80).optional(),
       description: z.string().min(40).max(165),
       /**
        * Hard gate: the category MUST be in the legal union (game-wiki menu

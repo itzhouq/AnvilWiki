@@ -84,6 +84,7 @@ const meta = {
 // blanked section at runtime.
 const hero: HomeUi['hero'] = home.hero;
 const updates: HomeUi['updates'] = home.updates;
+const gold = home.gold;
 const start: HomeUi['start'] = home.start;
 const popular: HomeUi['popular'] = home.popular;
 const explore: HomeUi['explore'] = home.explore;
@@ -201,6 +202,63 @@ function trendingLabel(link: QuickLink): string {
     cards={start.cards}
   />
 
+  {/* ─────────────── Gold outfit hub content (keyword surface) ─────────── */}
+  {/* One H2 per subtopic per the site SEO plan; nav headings below stay out
+      of the H1-H3 outline (demoted to <p>). */}
+  <section class="border-t border-border py-10 md:py-12">
+    <h2 class="font-display text-2xl font-semibold md:text-3xl">{gold.thisWeek.title}</h2>
+    <p class="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+      {gold.thisWeek.body}
+      <a href={localizePath(gold.thisWeek.href, locale)} class="font-semibold text-nav hover:underline">{gold.thisWeek.linkLabel}</a>.
+    </p>
+
+    <h2 class="mt-10 font-display text-2xl font-semibold md:text-3xl">{gold.odds.title}</h2>
+    <div class="mt-5 grid gap-6 md:grid-cols-2">
+      <div class="rounded-lg border border-border bg-card p-5">
+        <h3 class="font-display text-lg font-semibold">{gold.odds.baseTitle}</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{gold.odds.baseBody}</p>
+      </div>
+      <div class="rounded-lg border border-border bg-card p-5">
+        <h3 class="font-display text-lg font-semibold">{gold.odds.treasureTitle}</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{gold.odds.treasureBody}</p>
+      </div>
+    </div>
+    <p class="mt-4 text-sm">
+      <a href={localizePath(gold.odds.href, locale)} class="font-semibold text-nav hover:underline">{gold.odds.linkLabel}</a>.
+    </p>
+
+    <h2 class="mt-10 font-display text-2xl font-semibold md:text-3xl">{gold.how.title}</h2>
+    <p class="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+      {gold.how.body}
+      <a href={localizePath(gold.how.href, locale)} class="font-semibold text-nav hover:underline">{gold.how.linkLabel}</a>.
+    </p>
+
+    <h2 class="mt-10 font-display text-2xl font-semibold md:text-3xl">{gold.calendar.title}</h2>
+    <div class="mt-5 overflow-x-auto rounded-lg border border-border">
+      <table class="w-full text-left text-sm">
+        <thead class="border-b border-border bg-muted/40 text-xs uppercase tracking-wider text-muted-foreground">
+          <tr>
+            <th class="px-4 py-3 font-semibold">Week</th>
+            <th class="px-4 py-3 font-semibold">Skin</th>
+            <th class="px-4 py-3 font-semibold">Date</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-border">
+          {gold.calendar.rows.map((row) => (
+            <tr>
+              <td class="px-4 py-3 font-medium text-foreground">{row.week}</td>
+              <td class="px-4 py-3 text-muted-foreground">{row.skin}</td>
+              <td class="px-4 py-3 text-muted-foreground">{row.date}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm">
+      <a href={localizePath(gold.calendar.href, locale)} class="font-semibold text-nav hover:underline">{gold.calendar.linkLabel}</a>.
+    </p>
+  </section>
+
   {/* ─────────────────── Coupon-hub live deals strip ───────────────────── */}
   {
     couponDeals && couponDeals.merchants.length > 0 && (
@@ -268,7 +326,7 @@ function trendingLabel(link: QuickLink): string {
     {trendingLinks.length > 0 && (
       <aside class="lg:border-l lg:border-border lg:pl-8">
         <p class="eyebrow">{popular.badge}</p>
-        <h2 class="mt-2 font-display text-2xl font-semibold">{popular.title}</h2>
+        <p class="mt-2 font-display text-2xl font-semibold">{popular.title}</p>
         <ol class="mt-4 divide-y divide-border">
           {trendingLinks.map((link: QuickLink, index: number) => {
             const href = trendingHref(link);
@@ -302,7 +360,7 @@ function trendingLabel(link: QuickLink): string {
   {
     explore.modules?.length > 0 && (
       <section class="border-t border-border py-10 md:py-12">
-        <h2 class="font-display text-2xl font-semibold md:text-3xl">{explore.title}</h2>
+        <p class="font-display text-2xl font-semibold md:text-3xl">{explore.title}</p>
         <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{explore.description}</p>
         <div class="mt-8">
           <ExploreModules modules={explore.modules} locale={locale} />
@@ -316,7 +374,7 @@ function trendingLabel(link: QuickLink): string {
     closingCta.title && (
       <section class="border-t border-border py-10 md:py-12">
         <div class="home-hero rounded-lg border border-border p-8 text-center md:p-12">
-          <h2 class="font-display text-2xl font-semibold md:text-3xl">{closingCta.title}</h2>
+          <p class="font-display text-2xl font-semibold md:text-3xl">{closingCta.title}</p>
           <p class="mx-auto mt-3 max-w-xl leading-relaxed text-muted-foreground">{closingCta.description}</p>
           <div class="mt-6 flex justify-center gap-3">
             <a

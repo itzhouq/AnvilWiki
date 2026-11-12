@@ -108,6 +108,15 @@ export function languageAlternates(
  * distinct tags onto one /tags/ page ('Roblox 焰牙' and 'Roblox 攻略' both
  * strip to 'roblox-'; '焰牙 攻略' strips to just '-').
  */
+/** Display form of a tag slug: "gold-outfits" -> "Gold Outfits" (no leading #). */
+export function tagDisplayLabel(slug: string): string {
+  return slug
+    .split('-')
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
 export function slugifyTag(tag: string): string {
   const folded = tag
     .trim()

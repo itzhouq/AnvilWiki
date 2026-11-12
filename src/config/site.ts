@@ -50,6 +50,8 @@ export interface SiteConfig {
     /** ISO release date (optional). */
     releaseDate?: string;
   };
+  /** ISO date the SITE launched (feeds WebSite JSON-LD dates). */
+  launchedAt?: string;
   /**
    * Dimensions of the default OG/Twitter share image (public/images/hero.webp).
    * Emitted as og:image:width / og:image:height so social crawlers can render
@@ -70,7 +72,7 @@ export interface SiteConfig {
 }
 
 export const site: SiteConfig = {
-  name: 'Fortnite Wiki',
+  name: 'Fortnite Gold Outfits',
   shortName: 'Fortnite',
   description: 'Track every Fortnite gold outfit, weekly shop drop and pirate token odds — with clear guides, drop tables and update dates.',
   domain: 'fortnitegoldoutfits.com',
@@ -93,6 +95,7 @@ export const site: SiteConfig = {
   // update these in src/config/site.ts to match (wrong dims mis-crop share cards).
   ogImageWidth: 1200,
   ogImageHeight: 630,
+  launchedAt: '2026-11-12',
 };
 
 /** Absolute site URL (no trailing slash). Falls back to the Astro `site` config. */

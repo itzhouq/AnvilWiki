@@ -37,7 +37,7 @@ import { getRelatedEntries, getEntriesByCategory, isPossiblyOutdated, parseEntry
 import LazyYouTube from '~/components/video/LazyYouTube.astro';
 import SponsorCard from '~/components/article/SponsorCard.astro';
 import { articleJsonLd, breadcrumbJsonLd, pageTitle, videoObjectJsonLd, imageObjectJsonLd, faqPageJsonLd, recipeJsonLd } from '~/lib/seo';
-import { listPath, detailPath, tagPath, homeUrl } from '~/lib/url';
+import { listPath, detailPath, tagPath, tagDisplayLabel, homeUrl } from '~/lib/url';
 import { site } from '~/config/site';
 import { getAuthor } from '~/config/authors';
 
@@ -190,7 +190,7 @@ const jsonLd = [
      flips isFallback to false and re-admits the page automatically. */}
 <LocaleLayout
   locale={locale}
-  title={pageTitle(entry.data.title)}
+  title={pageTitle(entry.data.seoTitle ?? entry.data.title)}
   description={entry.data.description}
   image={coverUrl}
   alternates={alternates}
@@ -437,8 +437,7 @@ const jsonLd = [
               href={tagPath(slugifyTag(tag), servedLocale)}
               class="inline-flex items-center gap-1 rounded-md border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground transition hover:border-nav/50 hover:text-nav"
             >
-              <Icon name="lucide:hash" class="h-3 w-3" />
-              {tag}
+              {tagDisplayLabel(slugifyTag(tag))}
             </a>
           ))}
         </div>

@@ -36,7 +36,7 @@ const open = sharedStrings.open ?? 'Open';
 {cards.length > 0 && (
   <section class="border-t border-border py-10 md:py-12">
     <p class="eyebrow">{badge}</p>
-    <h2 class="mt-2 font-display text-2xl font-semibold tracking-tight md:text-3xl">{title}</h2>
+    <p class="mt-2 font-display text-2xl font-semibold tracking-tight md:text-3xl">{title}</p>
     <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       {cards.map((card: StartCard) => (
         <a

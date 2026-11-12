@@ -29,11 +29,14 @@ const ui = getUi(locale);
 const nav = ui.nav as Record<string, string>;
 const shared = ui.shared;
 const overview = (
-  ui.overview as Record<string, { overviewTitle: string; overviewDescription: string }>
+  ui.overview as Record<string, { overviewTitle: string; overviewDescription: string; overviewSeoTitle?: string }>
 )[category];
 const navItem = NAVIGATION_CONFIG.find((n) => n.key === category);
 
 const title = overview?.overviewTitle ?? nav[category] ?? category;
+// Optional SEO-title override so a hub can target a different search phrase
+// than its visible H1 (e.g. /codes/ hub) without a per-page rewrite.
+const seoTitle = overview?.overviewSeoTitle ?? title;
 // Localized default (locale JSON shared.defaultListDescription) — a hardcoded
 // English sentence here would leak into every locale the moment a fork adds
 // a 5th category without an overview entry. `|| title` (not ??) so an empty
@@ -96,7 +99,7 @@ const jsonLd = [
      sitemap filter excludes the same paths (astro.config.ts). -->
 <LocaleLayout
   locale={locale}
-  title={pageTitle(title)}
+  title={pageTitle(seoTitle)}
   description={description}
   alternates={alternates}
   jsonLd={jsonLd}
