@@ -84,10 +84,10 @@ export const site: SiteConfig = {
   },
   game: {
     name: 'Fortnite',
-    platform: 'epicgames',
-    developer: 'Forge Studios',
-    genre: 'Fantasy RPG',
-    releaseDate: '',
+    platform: 'Epic Games',
+    developer: 'Epic Games',
+    genre: 'Battle Royale',
+    releaseDate: '2017-07-25',
   },
   // og:image dims of the SHIPPED hero.webp — if you replace public/images/hero.webp,
   // update these in src/config/site.ts to match (wrong dims mis-crop share cards).

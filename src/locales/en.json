@@ -151,7 +151,7 @@
   },
   "home": {
     "meta": {
-      "title": "Fortnite Wiki — Guides, Bosses & Progression",
+      "title": "Fortnite Wiki — Gold Outfits, Shop Drops & Pirate Token",
       "description": "Track every Fortnite gold outfit, weekly shop drop and pirate token odds — with clear guides, drop tables and update dates."
     },
     "updates": {
@@ -184,7 +184,7 @@
     "hero": {
       "badge": "Fortnite",
       "title": "Fortnite Wiki",
-      "description": "Complete Fortnite guides — bosses, items, and progression.",
+      "description": "Fortnite gold outfit tracking, weekly shop drops and pirate token guides — updated with source dates.",
       "ctaPrimary": "Start reading",
       "ctaSecondary": "Browse all"
     },
@@ -238,7 +238,7 @@
             },
             {
               "label": "Step 3",
-              "detail": "First boss run",
+              "detail": "Grab the latest codes",
               "badge": "15 min"
             }
           ]
