@@ -137,16 +137,16 @@
   },
   "overview": {
     "guides": {
-      "overviewTitle": "All Guides",
-      "overviewDescription": "Guides content for Fortnite. Replace this overview text in the locale JSON — it feeds the category page title and description."
+      "overviewTitle": "Fortnite Guides",
+      "overviewDescription": "These guides answer the questions Fortnite players are actually searching for during the Treasure Hunters season. Pirate Token Odds holds the complete official drop-rate table — every chest reward from the 1-in-1,562,500 gold outfit down to the 1-in-127 Gizmos — plus the Treasure Hours multipliers Epic Games confirmed. How to Get the Pirate Token turns those odds into a grind plan: where chest density is highest on Crossbones Isle, how the Lucky Locator Gizmo helps, and when the Saturday boosted windows run. The Event Schedule page lines up every dated moment left in the season: Treasure Hours on Saturdays at 2 PM and 9 PM ET, Mastery Mondays, Captain's Days, and the December 5 chapter end event. Guides are re-verified after every official announcement, and numbers Epic has not confirmed are labeled as estimates or left out entirely. Start with the odds table if you want the raw math, the how-to guide if you are actively grinding for the token, or the schedule if you just want to plan your week around the boosted windows."
     },
     "items": {
-      "overviewTitle": "All Items",
-      "overviewDescription": "Items content for Fortnite. Replace this overview text in the locale JSON — it feeds the category page title and description."
+      "overviewTitle": "Fortnite Items",
+      "overviewDescription": "Every collectible worth tracking in Fortnite this season sits in this category. The Weekly Gold Outfit page follows the rarest free skin in the game — a 1-in-1,562,500 chest drop that rotates every Sunday during the Treasure Hunters event — and logs each weekly reveal with its dates. The Pirate Shop Access page explains the token that makes the entire V-Bucks shop free for 14 days, including what it covers, what it excludes, and the two validity windows Epic assigned to it. The Item Shop Today page breaks down the daily reset time, this week's captain shop arrivals such as Lil Uzi Vert and Cap'n Hatsune Miku, and where to check the live rotation. Item pages are refreshed after every Sunday reveal and every captain arrival, and each claim carries a last-verified date. Start with the gold outfits page if you are chasing the rarest drops, the pirate shop page if you want the token's full rules, or the shop page if you simply want to know what lands tonight."
     },
     "codes": {
-      "overviewTitle": "All Codes",
-      "overviewDescription": "Codes content for Fortnite. Replace this overview text in the locale JSON — it feeds the category page title and description."
+      "overviewTitle": "Fortnite Codes",
+      "overviewDescription": "This hub tracks every Fortnite redeem code and is updated the moment a new code goes live, with a verification date on every entry. The honest status right now is simple: Epic Games has no active redeem code as of November 12, 2026, and no legitimate code list exists to redeem. When Epic releases one, it will appear here and on the November 2026 code page with its reward, expiry, and source. Redemption always happens at the official fortnite.com/redeemcode page, and the code guide explains that process step by step. Because free V-Bucks code offers are one of the most common Fortnite scams, this hub also lists the red flags to check before pasting any code anywhere. In the meantime, the real free-reward channel this season is the Treasure Hunters event: chests on Crossbones Isle drop the Weekly Gold Outfit and the Pirate Shop Access token, and both are tracked on this site with their official odds."
     }
   },
   "home": {
