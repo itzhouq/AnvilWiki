@@ -151,8 +151,8 @@
   },
   "home": {
     "meta": {
-      "title": "Fortnite Wiki — Gold Outfits, Shop Drops & Pirate Token",
-      "description": "Track every Fortnite gold outfit, weekly shop drop and pirate token odds — with clear guides, drop tables and update dates."
+      "title": "Fortnite Pirate Token: What It Is and How to Get It This Week",
+      "description": "The Pirate Token — 1 in 137,500 chests — makes the whole Fortnite shop free for 14 days. Track the weekly gold outfit, official odds, and Treasure Hour times."
     },
     "updates": {
       "title": "Recent updates"
@@ -162,93 +162,187 @@
       "title": "Most read",
       "quickLinks": [
         {
-          "label": "Guides",
-          "href": "/guides"
+          "label": "Pirate Token odds",
+          "href": "/guides/pirate-token-odds"
         },
         {
-          "label": "Items",
-          "href": "/items"
+          "label": "Weekly gold outfit",
+          "href": "/items/fortnite-gold-outfits"
         },
         {
-          "label": "Codes",
+          "label": "Pirate Shop access",
+          "href": "/items/fortnite-pirate-shop"
+        },
+        {
+          "label": "Codes status",
           "href": "/codes"
         }
       ]
     },
     "closingCta": {
-      "title": "Start your Fortnite journey",
-      "description": "Bookmark this wiki and check back after every game update.",
-      "primary": "Browse all",
-      "secondary": "Join the community"
+      "title": "Hunt smarter this season",
+      "description": "Official odds, verified schedules and scam checks — every number on this site carries a source and a date.",
+      "primary": "Play Fortnite",
+      "secondary": ""
     },
     "hero": {
-      "badge": "Fortnite",
-      "title": "Fortnite Wiki",
-      "description": "Fortnite gold outfit tracking, weekly shop drops and pirate token guides — updated with source dates.",
-      "ctaPrimary": "Start reading",
-      "ctaSecondary": "Browse all"
+      "badge": "Fortnite Treasure Hunters",
+      "title": "Fortnite Pirate Token: What It Is and How to Get It This Week",
+      "description": "The Pirate Token is an ultra-rare chest drop — 1 in 137,500 — that makes every V-Bucks item in the shop free for 14 days. This week's gold outfit is Solid Gold Lil Uzi Vert; Saturday's Treasure Hours boost the odds.",
+      "videoId": "rnjWNafJy8Q",
+      "ctaPrimary": "Play Fortnite",
+      "ctaSecondary": "Track Gold Outfits"
     },
     "start": {
-      "badge": "Quick start",
-      "title": "New here?",
+      "badge": "Start here",
+      "title": "Three ways in",
       "cards": [
         {
           "number": "1",
           "title": "Guides",
-          "description": "Browse guides",
+          "description": "Official odds, hunting routes and the season calendar",
           "icon": "lucide:book-open",
           "href": "/guides"
         },
         {
           "number": "2",
           "title": "Items",
-          "description": "Browse items",
-          "icon": "lucide:book-open",
+          "description": "Gold outfits, the Pirate Shop and today's shop rotation",
+          "icon": "lucide:package",
           "href": "/items"
         },
         {
           "number": "3",
           "title": "Codes",
-          "description": "Browse codes",
-          "icon": "lucide:book-open",
+          "description": "Redeem status and scam checks, with verification dates",
+          "icon": "lucide:gift",
           "href": "/codes"
         }
       ]
     },
     "explore": {
       "title": "Explore",
-      "description": "Content modules",
+      "description": "What to read first",
       "modules": [
         {
           "order": 1,
-          "name": "Getting started",
-          "description": "Step-by-step progression",
-          "href": "/guides",
+          "name": "Hunt the Pirate Token",
+          "description": "The step-by-step grind plan",
+          "href": "/guides/how-to-get-pirate-token",
           "displayType": "steps",
           "highlights": [
             {
               "label": "Step 1",
-              "detail": "Finish the tutorial",
-              "badge": "5 min"
+              "detail": "Drop at Rubber Resort or Lantern Landing",
+              "badge": "~47 chests"
             },
             {
               "label": "Step 2",
-              "detail": "Claim starter codes",
-              "badge": "1 min"
+              "detail": "Sweep every spawn — official odds 1 in 137,500",
+              "badge": "per chest"
             },
             {
               "label": "Step 3",
-              "detail": "Grab the latest codes",
-              "badge": "15 min"
+              "detail": "Grind Saturday Treasure Hours for 1.5x odds",
+              "badge": "2–4 + 9–11 PM ET"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Season calendar",
+          "description": "Every dated moment left in the season",
+          "href": "/guides/fortnite-event-schedule",
+          "displayType": "timeline",
+          "highlights": [
+            {
+              "label": "Nov 15",
+              "detail": "Gold outfit reveal #3 (expected)",
+              "badge": "Sunday"
+            },
+            {
+              "label": "Nov 22",
+              "detail": "Captain's Day + gold reveal #4",
+              "badge": "Sunday"
+            },
+            {
+              "label": "Dec 5",
+              "detail": "Chapter 7 end event — season finale",
+              "badge": "Finale"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Rare drops tracker",
+          "description": "The official chest reward ladder",
+          "href": "/items",
+          "displayType": "labeled-cards",
+          "highlights": [
+            {
+              "label": "Weekly Gold Outfit",
+              "detail": "Solid Gold Lil Uzi Vert — week 2",
+              "badge": "1 in 1,562,500"
+            },
+            {
+              "label": "Pirate Shop Access",
+              "detail": "14 days of a free V-Bucks shop",
+              "badge": "1 in 137,500"
+            },
+            {
+              "label": "Vehicle & Decal",
+              "detail": "Weekly vehicle skin tier",
+              "badge": "1 in 7,813"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Redeem codes",
+          "description": "The honest status, verified",
+          "href": "/codes/fortnite-codes",
+          "displayType": "steps",
+          "highlights": [
+            {
+              "label": "Status",
+              "detail": "No active redeem codes as of Nov 12, 2026",
+              "badge": "Checked"
+            },
+            {
+              "label": "Where",
+              "detail": "Redeem only at fortnite.com/redeemcode",
+              "badge": "Official"
+            },
+            {
+              "label": "Safety",
+              "detail": "Generators and token sellers are scams",
+              "badge": "Warning"
             }
           ]
         }
       ]
     },
     "faq": {
-      "title": "FAQ",
-      "description": "Common questions",
-      "items": []
+      "title": "Pirate Token FAQ",
+      "description": "The questions everyone is asking",
+      "items": [
+        {
+          "question": "What is the Fortnite Pirate Token?",
+          "answer": "It is an ultra-rare chest drop from the Treasure Hunters season. Activating it makes every V-Bucks item in the shop free for 14 days, and each finder receives two tokens — one valid through December 15, 2026, one through December 31, 2027."
+        },
+        {
+          "question": "How rare is the Pirate Token?",
+          "answer": "Epic Games confirms 1 in 137,500 chests for all players. Saturday Treasure Hours add a 1.5x boost to roughly 1 in 91,667, and one confirmed event ran at 2x."
+        },
+        {
+          "question": "What is this week's gold outfit?",
+          "answer": "Solid Gold Lil Uzi Vert, revealed Sunday November 8. A new Solid Gold outfit is revealed every Sunday — Week 1 was Solid Gold Rugahand (A$AP Rocky)."
+        },
+        {
+          "question": "When are Treasure Hours?",
+          "answer": "Every Saturday: 2–4 PM ET and 9–11 PM ET. Both windows boost the chest odds, and the season runs through the December 5 end event."
+        }
+      ]
     }
   },
   "footer": {
