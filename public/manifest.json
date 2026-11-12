@@ -1,11 +1,11 @@
 {
-  "name": "Anvil Quest Wiki",
-  "short_name": "AQ Wiki",
-  "description": "Complete Anvil Quest wiki with boss guides, codes, and tier lists.",
+  "name": "Fortnite Wiki",
+  "short_name": "Fortnite",
+  "description": "Track every Fortnite gold outfit, weekly shop drop and pirate token odds — with clear guides, drop tables and update dates.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#f36716",
+  "theme_color": "#d39e17",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
