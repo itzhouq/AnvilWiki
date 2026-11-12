@@ -289,3 +289,15 @@ Adsterra 的 wire transfer(电汇)默认最低支付额是 $1000(另收手续费
 - [deployment.md](deployment.md) 上线后的数据复盘指标 + Clarity 热力图(看广告位有没有被点)
 - [seo.md](seo.md) 外链策略——和本文同一个原则:排名没起来前,先把内容和体验做好
 - 回到 [文档中心](README.md)
+
+## 已落盘单元密钥(fortnitegoldoutfits.com)
+
+domain_id 6195474 · Category: Other(beta 后台无 Games 项)· 取码日期 2026-11-13:
+
+| 单元 | 格式/尺寸 | placement id | key |
+| --- | --- | --- | --- |
+| NativeBanner_1 | Native Banner(响应式) | 32237586 | `7bd48469d5e4390f1bc545cc30993cce` |
+| 728x90_1 | Banner 728×90(iframe) | 32237587 | `cd1215c48c3d0a025e37a3c35c5b93f3` |
+| 320x50_1 | Banner 320×50(iframe) | 32237588 | `4892c2db21670a61e6d42956b551f084` |
+
+脚本域 bauval.org;片段文件 `public/ads/{native-banner,incontent-728x90,sticky-320x50}.html`;env 开关 `PUBLIC_ADSTERRA_SLOT_INCONTENT_728X90 / NATIVE_BANNER / STICKY_320X50`。未创建也未勾选 Popunder/Social Bar。
